@@ -116,7 +116,6 @@ const testSecondArray = function(array2){
 }
 console.log(testSecondArray([2, 3]));
 
-// ??????????????????????????????????????????????????????????????????????????????????????????????????
 /* 11. Create a function to find the longest string from a given array of strings.
     Pass the array as parameter and return the longest string. */
 writeHeader("TASK 11: ")
@@ -125,13 +124,13 @@ writeHeader("TASK 11: ")
 const findLongestString = function(arrayOfString){
   let longestString = 0;
   for(let i = 0; i < arrayOfString.length; i++){
-    if(arrayOfString[i].length > arrayOfString[longestString]){
-      longestString = arrayOfString[i]
+    if(arrayOfString[i].length > longestString){
+      longestString = i
     }
   }
   return longestString
 }
-console.log(findLongestString(["ali", "mukhtor", "ikromovich"]));
+console.log(findLongestString(["ali", "mukhtor", "ikromovich"]));// output of largest string is shown as index  
 
 /* 12. Create a function to find the types of a given angle:
   1. Acute angle ⇒ between 0 and 90 degrees. Return `acute`.
